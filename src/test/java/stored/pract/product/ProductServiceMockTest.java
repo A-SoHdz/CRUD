@@ -51,7 +51,7 @@ public class ProductServiceMockTest {
 	@Test
 	public void whenValidUpdateStock_ThenReturnNewStock() {
 		Product newStock= productService.updateStock(1L,Double.parseDouble("8"));
-	    Assertions.assertThat(newStock.getStatus()).isEqualTo(13);
+	    Assertions.assertThat(newStock.getStock()).isEqualTo(13);
 	}//whenvalid
 	
 }//class ProductServiceMockTest
