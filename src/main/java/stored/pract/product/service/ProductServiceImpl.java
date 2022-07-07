@@ -3,16 +3,19 @@ package stored.pract.product.service;
 import java.util.Date;
 import java.util.List;
 
-import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
+import lombok.RequiredArgsConstructor;
 import stored.pract.product.entity.Category;
 import stored.pract.product.entity.Product;
 import stored.pract.product.repository.ProductRepository;
 
+@Service
+@RequiredArgsConstructor
 public class ProductServiceImpl implements ProductService {
 
-	@Autowired
-	private ProductRepository productRepository;
+	//@Autowired
+	private final ProductRepository productRepository;
 	
 	@Override
 	public List<Product> listAllProduct() {
